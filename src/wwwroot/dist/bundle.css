@@ -1,0 +1,26 @@
+body {
+  background-color: #dddddd; }
+
+.dataTable {
+  width: 500px;
+  border: 1px solid black;
+  border-collapse: collapse; }
+  .dataTable td {
+    border: 1px solid black; }
+  .dataTable__columnCheck {
+    width: 50px;
+    text-align: left; }
+  .dataTable__columnName {
+    width: 200px;
+    text-align: left; }
+  .dataTable__columnCount {
+    width: 200px;
+    text-align: left; }
+  .dataTable__columnActions {
+    width: 50px;
+    text-align: right; }
+  .dataTable__error {
+    background-color: red; }
+
+
+/*# sourceMappingURL=bundle.css.map*/

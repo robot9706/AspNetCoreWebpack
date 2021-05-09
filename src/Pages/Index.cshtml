@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Your seat reservations (<span data-bind="text: seats().length"></span>)</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Passenger name</th>
+            <th>Meal</th>
+            <th>Surcharge</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: seats">
+        <tr>
+            <td><input data-bind="value: name" /></td>
+            <td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
+            <td data-bind="text: formattedPrice"></td>
+            <td><a href="#" data-bind="click: $root.removeSeatChild">Remove</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<button data-bind="click: addSeat, enable: seats().length < 5">Reserve another seat</button>
+
+<h3 data-bind="visible: totalSurcharge() > 0">
+    Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+</h3>

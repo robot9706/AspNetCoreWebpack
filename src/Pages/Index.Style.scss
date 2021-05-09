@@ -1,0 +1,39 @@
+﻿@import "Shared/Variables.scss";
+
+body {
+    background-color: $backgroundColor;
+}
+
+.dataTable {
+    width: 500px;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    td {
+        border: 1px solid black;
+    }
+
+    &__columnCheck {
+        width: 50px;
+        text-align: left;
+    }
+
+    &__columnName {
+        width: 200px;
+        text-align: left;
+    }
+
+    &__columnCount {
+        width: 200px;
+        text-align: left;
+    }
+
+    &__columnActions {
+        width: 50px;
+        text-align: right;
+    }
+
+    &__error {
+        background-color: red;
+    }
+}
